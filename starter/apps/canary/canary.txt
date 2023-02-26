@@ -1,0 +1,50 @@
+NAME          TYPE           CLUSTER-IP       EXTERNAL-IP                                                                     PORT(S)        AGE
+blue-svc      LoadBalancer   172.20.220.8     a5b2ac7ea03834e678f74ed28e1de47b-3454500aab02c968.elb.us-east-2.amazonaws.com   80:31688/TCP   62m
+canary-svc    ClusterIP      172.20.207.142   <none>                                                                          80/TCP         14m
+hello-world   LoadBalancer   172.20.23.161    abf1e1dbad4584663abe88e643271b9e-cba612915f559391.elb.us-east-2.amazonaws.com   80:30371/TCP   58m
+
+% kubectl run debug --rm -i --tty --image nicolaka/netshoot -- /bin/bash
+If you don't see a command prompt, try pressing enter.
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 1</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 2</h1>
+</html>
+debug:~# curl 172.20.207.142
+<html>
+<h1>This is version 1</h1>
