@@ -1,0 +1,4 @@
+NAMESPACE     NAME                                  CPU(cores)   MEMORY(bytes)   
+udacity       hello-world-794458d64d-q79pg          2m           20Mi    
+
+Deployment: hello-world
